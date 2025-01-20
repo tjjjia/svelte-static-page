@@ -1,8 +1,12 @@
 name: Deploy to GitHub Pages
 
 on:
+  # Trigger on every push to the main branch
   push:
     branches: 'main'
+  # Trigger once every 24 hours
+  # schedule:
+    # - cron: "0 0 * * *" # At 00:00 UTC daily
 
 jobs:
   build_site:
@@ -19,6 +23,9 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Run prebuild step
+        run: npm run prebuild
 
       - name: build
         env:

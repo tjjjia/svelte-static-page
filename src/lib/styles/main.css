@@ -1,0 +1,26 @@
+@import url("reset.css");
+
+a, a:link, a:active,
+a:hover, a:visited {
+	color: #00f;
+}
+
+:root{
+	--root-dimension: 16px;
+	--font-mono: monospace;
+	--font-sans: "UN-11 ST Trial", "Arial", sans-serif;
+	--color-gray: hsl(0, 0%, 45%);
+}
+
+em {
+	font-style: italic;
+}
+
+html, body {
+	font-size: var(--root-dimension);
+}
+
+body {
+	font-family: var(--font-sans);
+	font-weight: 500;
+}
